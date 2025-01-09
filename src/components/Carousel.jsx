@@ -17,10 +17,12 @@ export default function Carousel({ images }) {
 
   return (
     <div className="relative h-96 rounded-2xl overflow-hidden group">
-      <div
-        className="w-full h-full bg-center bg-cover duration-500"
-        style={{ backgroundImage: `url(${images[currentIndex]})` }}
-      ></div>
+      {/* Using <img> instead of backgroundImage for testing */}
+      <img
+        src={images[currentIndex]}
+        alt={`Slide ${currentIndex}`}
+        className="w-full h-full object-cover duration-500"
+      />
       <button
         className="absolute top-1/2 left-2 -translate-y-1/2 bg-teal-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
         onClick={goToPrevious}
@@ -36,4 +38,3 @@ export default function Carousel({ images }) {
     </div>
   );
 }
-

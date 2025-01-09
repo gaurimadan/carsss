@@ -5,9 +5,9 @@ import CarOverview from './components/CarOverview';
 import View360 from './components/View360';
 
 const carImages = [
-  'carsss/public/image.png',
-  '/placeholder.svg?height=400&width=600&text=Car+Side',
-  '/placeholder.svg?height=400&width=600&text=Car+Back',
+  '/image copy.png',
+  '/image copy 2.png',
+  '/image copy 3.png',
 ];
 
 const carDetails = {
