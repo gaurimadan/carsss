@@ -1,14 +1,25 @@
-import React from 'react';
-import { Rotate3D, X } from 'lucide-react';
+import React from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, useGLTF } from "@react-three/drei";
+import { Rotate3D, X } from "lucide-react";
+
+function Model({ filePath }) {
+  const { scene } = useGLTF(filePath);
+  return <primitive object={scene} />;
+}
 
 export default function View360({ show3DView, onToggle3D }) {
   return (
     <>
       {show3DView && (
         <div className="absolute inset-0 bg-gray-900 flex items-center justify-center">
-          <div className="text-center">
-            <Rotate3D className="w-16 h-16 mx-auto mb-4 text-purple-400" />
-            <p className="text-xl text-gray-400">3D View Rendered Here</p>
+          <div className="w-full h-full">
+            <Canvas>
+              <ambientLight intensity={0.5} />
+              <directionalLight position={[2, 5, 2]} />
+              <OrbitControls />
+              <Model filePath="/thar.glb" />
+            </Canvas>
           </div>
         </div>
       )}
