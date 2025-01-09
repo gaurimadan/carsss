@@ -5,7 +5,7 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls, useGLTF } from '@react-three/drei'
 
 function CarModel() {
-  const { scene } = useGLTF('/public/thar.glb')
+  const { scene } = useGLTF('initialie/public/thar.glb')
   return <primitive object={scene} scale={[1, 1, 1]} />
 }
 
