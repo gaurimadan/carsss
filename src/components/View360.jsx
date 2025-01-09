@@ -1,27 +1,24 @@
-'use client'
+import React from 'react';
+import '@google/model-viewer';
 
-import React, { Suspense } from 'react'
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls, useGLTF } from '@react-three/drei'
-
-function CarModel() {
-  const { scene } = useGLTF('initialie/public/thar.glb')
-  return <primitive object={scene} scale={[1, 1, 1]} />
-}
-
-export default function View360() {
+export default function View360({ src, iosSrc, poster }) {
   return (
-    <div className="w-full h-96">
-      <Canvas camera={{ position: [5, 5, 5], fov: 75 }}>
-        <Suspense fallback={null}>
-          <ambientLight intensity={0.5} />
-          <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-          <pointLight position={[-10, -10, -10]} />
-          <CarModel />
-          <OrbitControls />
-        </Suspense>
-      </Canvas>
-    </div>
-  )
+    <model-viewer
+      src={src}
+      ios-src={iosSrc}
+      poster={poster}
+      alt="3D model viewer"
+      shadow-intensity="1"
+      camera-controls
+      auto-rotate
+      ar
+      style={{
+        width: '100%',
+        height: '400px',
+        backgroundColor: '#f0fff4', // Light green background to match our theme
+        '--poster-color': '#ffffff00'
+      }}
+    ></model-viewer>
+  );
 }
 

@@ -22,13 +22,13 @@ export default function Carousel({ images }) {
         style={{ backgroundImage: `url(${images[currentIndex]})` }}
       ></div>
       <button
-        className="absolute top-1/2 left-2 -translate-y-1/2 bg-green-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+        className="absolute top-1/2 left-2 -translate-y-1/2 bg-teal-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
         onClick={goToPrevious}
       >
         &#10094;
       </button>
       <button
-        className="absolute top-1/2 right-2 -translate-y-1/2 bg-green-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+        className="absolute top-1/2 right-2 -translate-y-1/2 bg-teal-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
         onClick={goToNext}
       >
         &#10095;

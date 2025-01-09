@@ -19,10 +19,10 @@ export default function EmiCalculator({ carPrice }) {
   };
 
   return (
-    <div className="bg-green-50 p-6 rounded-3xl shadow-xl space-y-6">
-      <h2 className="text-3xl font-semibold mb-6 text-green-800">EMI Calculator</h2>
+    <div className="bg-teal-50 p-6 rounded-3xl shadow-xl space-y-6">
+      <h2 className="text-3xl font-semibold mb-6 text-teal-800">EMI Calculator</h2>
       <div>
-        <label htmlFor="loanAmount" className="block text-sm font-medium text-green-700">
+        <label htmlFor="loanAmount" className="block text-sm font-medium text-teal-700">
           Loan Amount ($)
         </label>
         <input
@@ -30,11 +30,11 @@ export default function EmiCalculator({ carPrice }) {
           type="number"
           value={loanAmount}
           onChange={(e) => setLoanAmount(Number(e.target.value))}
-          className="mt-1 block w-full rounded-md border-green-300 shadow-sm focus:border-green-500 focus:ring focus:ring-green-200 focus:ring-opacity-50"
+          className="mt-1 block w-full rounded-md border-teal-300 shadow-sm focus:border-teal-500 focus:ring focus:ring-teal-200 focus:ring-opacity-50"
         />
       </div>
       <div>
-        <label htmlFor="months" className="block text-sm font-medium text-green-700">
+        <label htmlFor="months" className="block text-sm font-medium text-teal-700">
           Loan Term (months)
         </label>
         <input
@@ -47,10 +47,10 @@ export default function EmiCalculator({ carPrice }) {
           onChange={(e) => setMonths(Number(e.target.value))}
           className="mt-1 block w-full"
         />
-        <div className="mt-1 text-sm text-green-600">{months} months</div>
+        <div className="mt-1 text-sm text-teal-600">{months} months</div>
       </div>
       <div>
-        <label htmlFor="interestRate" className="block text-sm font-medium text-green-700">
+        <label htmlFor="interestRate" className="block text-sm font-medium text-teal-700">
           Interest Rate (%)
         </label>
         <input
@@ -58,12 +58,12 @@ export default function EmiCalculator({ carPrice }) {
           type="number"
           value={interestRate}
           onChange={(e) => setInterestRate(Number(e.target.value))}
-          className="mt-1 block w-full rounded-md border-green-300 shadow-sm focus:border-green-500 focus:ring focus:ring-green-200 focus:ring-opacity-50"
+          className="mt-1 block w-full rounded-md border-teal-300 shadow-sm focus:border-teal-500 focus:ring focus:ring-teal-200 focus:ring-opacity-50"
           step="0.1"
         />
       </div>
       <div className="mt-6 text-center">
-        <span className="text-2xl font-bold text-green-700">Monthly EMI: ${emi}</span>
+        <span className="text-2xl font-bold text-teal-700">Monthly EMI: ${emi}</span>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import CarOverview from './components/CarOverview';
 import View360 from './components/View360';
 
 const carImages = [
-  '/placeholder.svg?height=400&width=600&text=Car+Front',
+  'carsss/public/image.png',
   '/placeholder.svg?height=400&width=600&text=Car+Side',
   '/placeholder.svg?height=400&width=600&text=Car+Back',
 ];
@@ -16,6 +16,10 @@ const carDetails = {
   mileage: '0 miles',
   price: '$129,990',
 };
+
+const carModelSrc = 'carsss/public/thar.glb';
+const carModelIosSrc = '"https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" ';
+const carModelPoster = 'carsss/public/image.png';
 
 export default function CarDetails() {
   const [is360View, setIs360View] = useState(false);
@@ -33,7 +37,11 @@ export default function CarDetails() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="bg-green-50 rounded-3xl p-6 shadow-xl">
             {is360View ? (
-              <View360 />
+              <View360 
+                src={carModelSrc} 
+                iosSrc={carModelIosSrc} 
+                poster={carModelPoster} 
+              />
             ) : (
               <Carousel images={carImages} />
             )}
