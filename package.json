@@ -7,6 +7,7 @@
     "@react-three/drei": "^9.120.6",
     "@react-three/fiber": "^8.17.12",
     "cra-template": "1.2.0",
+    "hls.js": "^1.5.18",
     "lucide-react": "^0.469.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -18,7 +19,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "craco": "craco start"
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^7.1.0",
     "@types/three": "^0.172.0",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
