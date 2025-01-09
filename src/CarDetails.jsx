@@ -13,9 +13,9 @@ export default function App() {
     mileage: "12,500 miles",
     price: "39,999",
     images: [
-      "/image copy.png",
-      "/image copy 2.png",
-      "/image copy.png"
+        "/thartharleftrearthreequarter.jpeg",
+      "thartharfrontview.jpeg",
+      "/thartharrearview.jpeg"
     ]
   };
 

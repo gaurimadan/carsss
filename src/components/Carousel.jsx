@@ -25,7 +25,7 @@ export default function Carousel({ images, show3DView }) {
           className="w-full h-full object-cover"
         />
         
-        {/* Navigation Buttons */}
+       
         <div className="absolute inset-0 flex items-center justify-between px-4 pointer-events-none">
           <button
             onClick={goToPrevious}
@@ -45,9 +45,6 @@ export default function Carousel({ images, show3DView }) {
         </div>
 
        
-       
-
-        {/* Image Indicators */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
           {images.map((_, index) => (
             <button
