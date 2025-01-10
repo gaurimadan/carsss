@@ -35,7 +35,7 @@ export default function EmiCalculator({ carPrice }) {
         </div>
         
         <div>
-          <label className="block text-gray-400 mb-2">Down Payment ($)</label>
+          <label className="block text-gray-400 mb-2">Down Payment (Rs)</label>
           <div className="space-y-2">
             <input
               type="range"
@@ -70,7 +70,7 @@ export default function EmiCalculator({ carPrice }) {
       </div>
       <div className="mt-8 text-center p-6 bg-gray-900/50 rounded-2xl">
         <span className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-          Monthly EMI: ${emi}
+          Monthly EMI: Rs{emi}
         </span>
       </div>
     </div>
