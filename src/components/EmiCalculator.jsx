@@ -46,7 +46,7 @@ export default function EmiCalculator({ carPrice }) {
               onChange={(e) => setDownPayment(Number(e.target.value))}
               className="w-full accent-purple-500"
             />
-            <div className="text-gray-400">Rs{downPayment}</div>
+            <div className="text-gray-400">Rs {downPayment}</div>
           </div>
         </div>
        
@@ -70,7 +70,7 @@ export default function EmiCalculator({ carPrice }) {
       </div>
       <div className="mt-8 text-center p-6 bg-gray-900/50 rounded-2xl">
         <span className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-          Monthly EMI: Rs{emi}
+          Monthly EMI: Rs {emi}
         </span>
       </div>
     </div>
