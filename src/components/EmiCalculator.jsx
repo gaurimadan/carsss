@@ -25,7 +25,7 @@ export default function EmiCalculator({ carPrice }) {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         
         <div>
-          <label className="block text-gray-400 mb-2">Loan Amount ($)</label>
+          <label className="block text-gray-400 mb-2">Loan Amount (Rs)</label>
           <input
             type="number"
             value={loanAmount}
@@ -46,7 +46,7 @@ export default function EmiCalculator({ carPrice }) {
               onChange={(e) => setDownPayment(Number(e.target.value))}
               className="w-full accent-purple-500"
             />
-            <div className="text-gray-400">${downPayment}</div>
+            <div className="text-gray-400">Rs{downPayment}</div>
           </div>
         </div>
        
